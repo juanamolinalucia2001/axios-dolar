@@ -45,7 +45,7 @@
         let ddmmyy = arrayFecha[2]+'-'+arrayFecha[1]+'-'+arrayFecha[0];
 
         try {
-          this.mostrarLoading({titulo:'Acediendo a info'})
+          this.mostrarLoading({titulo:'Accediendo a la informacion'})
 
           let datos = await axios.get(`https://mindicador.cl/api/dolar/${ddmmyy}`)
           if(datos.data.serie.length > 0){
@@ -56,7 +56,6 @@
           
         }catch (error){
           //console.log(error);
-          this.ocultarLoading()
         }
         finally{
           this.ocultarLoading()

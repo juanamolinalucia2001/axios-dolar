@@ -7,22 +7,16 @@ export default new Vuex.Store({
   state: {
     loading:{
       titulo:'',
-      estado:false
+      estado:false,
     }
-  },
-  getters: {
   },
   mutations: {
     mostrarLoading(state, payload){
       state.loading.titulo = payload.titulo
-      state.loading.estado=true
+      state.loading.estado = true
     },
-    acultarLoading(state){
-      state.loading.estado=false
+    ocultarLoading(state){
+      state.loading.estado = false
     }
-  },
-  actions: {
-  },
-  modules: {
   }
 })
