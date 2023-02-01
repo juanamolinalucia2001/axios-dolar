@@ -5,6 +5,7 @@
       <v-card>
         <v-date-picker
          v-model="fecha"
+         class="indigo"
          full-width
          locale="es-ar"
          :min="limiteFechaMin"
@@ -14,9 +15,9 @@
 
         </v-date-picker>
       </v-card>
-        <v-card color="purple" dark>
+        <v-card color="indigo" dark>
           <v-card-text class="display-1 text-md-center" >
-                 {{valor}}
+                 ${{valor}}
           </v-card-text>
         </v-card>
        </v-flex>

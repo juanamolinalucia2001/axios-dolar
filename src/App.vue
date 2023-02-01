@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Header></Header>
     <v-main>
       <v-container>
          <router-view/>
@@ -11,7 +12,7 @@
       width="300"
     >
       <v-card
-        color="primary"
+        color="indigo"
         dark
       >
         <v-card-text>
@@ -26,12 +27,14 @@
     </v-dialog>
       </v-container>
     </v-main>
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
 import { mapState }from "vuex"
-
+import Footer from './components/Footer.vue'
+import Header from './components/Header.vue'
 export default {
   name: 'App',
 
@@ -42,6 +45,10 @@ export default {
   },
   computed:{
       ...mapState(['loading'])
+  },
+  components:{
+    Footer,
+    Header
   }
 };
 </script>
